@@ -238,6 +238,12 @@ background-size:200%;
 .section-title{
     font-size: 40px;
     font-weight: 700;
+    background:linear-gradient(to right,#883901,#a34909,#e99b63,#d8732a,#a34909,#883901);
+    background-size:200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animationGradient 2.5s linear infinite;
 }
 
 .info-cards{
@@ -257,7 +263,7 @@ background-size:200%;
     width: auto;
     height: 40vh;
     overflow: hidden;
-    border: 2px solid #572805;
+    border: 2px solid rgb(68, 68, 68);
     background-color: black;
     border-radius: 20px;
     transition: 0.5s;
@@ -318,7 +324,7 @@ background-size:200%;
 }
 
 .card:hover{
-    box-shadow: 0 0 15px #e99b63;
+    box-shadow: 0 0 15px grey;
 }
 
 .card:nth-child(3){
@@ -419,6 +425,12 @@ background-size:200%;
 .project h1{
     font-family: "Open Sans", sans-serif;
     padding-bottom: 10px;
+    background:linear-gradient(to right,#883901,#a34909,#e99b63,#d8732a,#a34909,#883901);
+    background-size:200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animationGradient 2.5s linear infinite;
 }
 
 .project hr{
@@ -546,6 +558,12 @@ background-size:200%;
 .services h1{
     font-family: "Open Sans", sans-serif;
     padding-bottom: 10px;
+    background:linear-gradient(to right,#883901,#a34909,#e99b63,#d8732a,#a34909,#883901);
+    background-size:200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animationGradient 2.5s linear infinite;
 }
 
 .services hr{
@@ -641,6 +659,12 @@ background-size:200%;
 .contact h1{
     font-family: "Open Sans", sans-serif;
     padding-bottom: 10px;
+    background:linear-gradient(to right,#883901,#a34909,#e99b63,#d8732a,#a34909,#883901);
+    background-size:200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animationGradient 2.5s linear infinite;
 }
 
 .contact hr{
