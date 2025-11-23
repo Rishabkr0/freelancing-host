@@ -783,3 +783,13 @@ background-size:200%;
 .btn-send:hover {
   background: #2c36d9;
 }
+
+
+.service_message{
+  margin-top:30px;
+}
+
+.service_message a{
+  text-decoration: none;
+  color: white;
+}
