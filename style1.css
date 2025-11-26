@@ -468,7 +468,7 @@ background-size:200%;
 }
 
 .project-card p {
-  color: #555;
+  color: lightgray;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
@@ -593,7 +593,7 @@ background-size:200%;
 }
 
 .service-card p {
-  color: #555;
+  color: lightgray;
   font-size: 0.9rem;
   transition: color 0.5s;
   position: relative;
@@ -776,20 +776,6 @@ background-size:200%;
   color: white;
 }
 
-
-.mainaadmicard{
-  background-image: url('mainaadmi2.png');
-  background-size: cover; 
-}
-
-.mainaadmicard h1{
-  top: 190px;
-  color: grey;
-}
-
-.mainaadmicard p{
-  color: grey;
-}
 
 /*team section*/
 
