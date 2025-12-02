@@ -22,6 +22,7 @@
      </script>
 
 
+
   <style>
     :root {
       --bg-main: #050816;
@@ -610,7 +611,7 @@
         <p class="note">
           <span>*</span> All fields are mandatory. The form will submit only when every detail is filled.
         </p>
-        <button type="submit" class="btn-primary">
+        <button type="submit" class="btn-primary" onclick="sendMail()">
           <span>Submit Request</span>
           <span class="icon">↗</span>
         </button>
@@ -631,7 +632,7 @@
 
     <div class="success-badge">
       <span class="success-badge-dot"></span>
-      <span>Ticket created • You will receive updates on your EMAIL </span>
+      <span>Ticket created • You will receive updates on your email / contact number.</span>
     </div>
 
     <p class="success-footnote">
@@ -670,58 +671,33 @@
     }
 
     form.addEventListener("submit", function (event) {
-      // Prevent default submission - we'll handle validation and sending
-      event.preventDefault();
-
       // Check HTML5 validity
       if (!form.checkValidity()) {
+        event.preventDefault();
         form.classList.add("show-errors");
         showToast("Please fill all required details before submitting.");
-        return;
+      } else {
+        event.preventDefault(); // we simulate success instead of real backend submit
+
+        // Remove any previous error styles
+        form.classList.remove("show-errors");
+
+        // Show success interface (next screen)
+        formContainer.classList.add("hidden");
+        successContainer.classList.remove("hidden");
+
+        // Scroll to top (useful on mobile)
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
-
-      // Remove any previous error styles
-      form.classList.remove("show-errors");
-
-      // Build params for email
-      const params = {
-        fullName: document.getElementById("fullName").value,
-        contactNumber: document.getElementById("contactNumber").value,
-        email: document.getElementById("email").value,
-        address: document.getElementById("address").value,
-        serviceType: document.getElementById("serviceType").value,
-        projectDescription: document.getElementById("projectDescription").value,
-      };
-
-      // Send email and show success only after it resolves
-      sendMail(params)
-        .then(() => {
-          showToast("Your request has been sent via email!");
-          formContainer.classList.add("hidden");
-          successContainer.classList.remove("hidden");
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          form.reset();
-        })
-        .catch((err) => {
-          console.error("Email send failed:", err);
-          showToast("Failed to send request. Please try again later.");
-        });
     });
 
-
-    function sendMail(params) {
-      // return the promise so caller can react to success/failure
-      return emailjs.send("service_k4cdatn", "template_qjzyqhk", params);
-    }
-
-
- // Optional: allow user to go back and submit another request
-     backToFormBtn.addEventListener("click", () => {
-       successContainer.classList.add("hidden");
-       formContainer.classList.remove("hidden");
-       form.reset(); // clear previous values
-       window.scrollTo({ top: 0, behavior: "smooth" });
-     });
-   </script>
- </body>
- </html>
+    // Optional: allow user to go back and submit another request
+    backToFormBtn.addEventListener("click", () => {
+      successContainer.classList.add("hidden");
+      formContainer.classList.remove("hidden");
+      form.reset(); // clear previous values
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>

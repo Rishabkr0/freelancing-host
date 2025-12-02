@@ -1,4 +1,5 @@
-const navLinks = document.querySelectorAll('.ul-list li a');
+// Add 'nav-link' class to your navigation links in HTML
+const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
 function removeActive() {

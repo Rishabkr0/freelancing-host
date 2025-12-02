@@ -10,6 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Email Js Script here-- -->
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+     </script>
+     <script type="text/javascript">
+     (function(){
+      emailjs.init({
+        publicKey: "Og4w55NkPGpN-uNv7",
+      });
+     })();
+     </script>
+     
+
 </head>
 <body>
     <img class="image-gradient"src="gradient.png" alt="gradient">
@@ -35,24 +49,24 @@
             <div class="div-list ">
             <ul class="ul-list">
                 <li class="active"> 
-                    <i class="fa-regular fa-house"></i>
-                    <a href="#home">Home</a>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li>
                     <i class="fa-regular fa-address-card"></i>
-                    <a href="#about">About</a>
+                    <a href="#about" class="nav-link">About</a>
                 </li>
                 <li>
                     <i class="fa-regular fa-folder-open"></i>
-                    <a href="#project">Projects</a>
+                    <a href="#project" class="nav-link">Projects</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-code"></i>
-                    <a href="#services">services</a>
+                    <a href="#services" class="nav-link">services</a>
                 </li>
                 <li>
                     <i class="fa-regular fa-envelope"></i>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
         </div>
@@ -208,25 +222,37 @@
     <div class="service-card">
       <img src="services_img/web.svg" alt="Web Development">
       <h3>Web Development</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
+      <p>Custom, responsive websites built with the latest technologies for optimal performance and user experience across all devices.</p>
+      <div class="btns">
+        <a href="web-development.html" class="btn"><i class="fas fa-external-link-alt"></i> Learn More</a>
+      </div>
     </div>
 
     <div class="service-card">
       <img src="services_img/app.svg" alt="App Development">
       <h3>App Development</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
+      <p>Native and cross-platform mobile applications designed to engage users and drive business growth on iOS and Android.</p>
+      <div class="btns">
+        <a href="app-development.html" class="btn"><i class="fas fa-external-link-alt"></i> Learn More</a>
+      </div>
     </div>
 
     <div class="service-card">
       <img src="services_img/dm.svg" alt="Digital Marketing">
       <h3>Digital Marketing</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
+      <p>Data-driven strategies to increase your online presence, generate leads, and maximize ROI across digital channels.</p>
+      <div class="btns">
+        <a href="digital-marketing.html" class="btn"><i class="fas fa-external-link-alt"></i> Learn More</a>
+      </div>
     </div>
 
     <div class="service-card">
       <img src="services_img/seo.svg" alt="Email Marketing">
       <h3>Email Marketing</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
+      <p>Targeted email campaigns that convert, with engaging content and automation to nurture leads and retain customers.</p>
+      <div class="btns">
+        <a href="email-marketing.html" class="btn"><i class="fas fa-external-link-alt"></i> Learn More</a>
+      </div>
     </div>
 
   </div>
@@ -342,7 +368,7 @@
           <div class="form-group">
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn-send">Send Message</button>
+          <button type="submit" class="btn-send service_message"><a href="l&tform.html">Send Message</a></button>
         </form>
       </div>
     </div>

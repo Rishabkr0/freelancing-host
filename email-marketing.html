@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Marketing Services | Your Company Name</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('services_img/email-bg.jpg') center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        .service-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .service-section {
+            margin-bottom: 50px;
+        }
+        .service-section h2 {
+            color: #d8732a;
+            margin-bottom: 20px;
+        }
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #d8732a;
+        }
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #d8732a;
+            margin-bottom: 15px;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 50px 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #d8732a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #b55e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(216, 115, 42, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">RCODE</h1>
+        </header>
+        <header class="newnav">
+            <div class="div-list">
+                <ul class="ul-list">
+                    <li> 
+                        <i class="fa-solid fa-house"></i>
+                        <a href="index.html#home" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-address-card"></i>
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-folder-open"></i>
+                        <a href="index.html#project" class="nav-link">Projects</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa-solid fa-code"></i>
+                        <a href="index.html#services" class="nav-link">Services</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Email Marketing Services</h1>
+            <p>Building meaningful connections through strategic email campaigns</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <div class="service-content">
+        <div class="service-section">
+            <h2>Our Email Marketing Solutions</h2>
+            <p>We create targeted email marketing campaigns that engage your audience, nurture leads, and drive conversions. Our data-driven approach ensures your messages reach the right people at the right time with the right content.</p>
+            
+            <div class="service-features">
+                <div class="feature-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Email Campaigns</h3>
+                    <p>Custom-designed email campaigns that capture attention and drive action from your subscribers.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Automation</h3>
+                    <p>Set up automated email sequences that nurture leads and engage customers at every stage of their journey.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-list-check"></i>
+                    <h3>List Management</h3>
+                    <p>Grow, segment, and maintain a healthy email list to improve deliverability and engagement rates.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-section">
+            <h2>Our Email Marketing Process</h2>
+            <p>We follow a strategic approach to create effective email marketing campaigns:</p>
+            <ol>
+                <li><strong>Audience Analysis:</strong> Understanding your subscribers and their preferences.</li>
+                <li><strong>Strategy Development:</strong> Creating a content and segmentation strategy.</li>
+                <li><strong>Design & Copywriting:</strong> Crafting compelling emails with engaging content.</li>
+                <li><strong>Deployment:</strong> Sending emails at optimal times for maximum engagement.</li>
+                <li><strong>Analytics:</strong> Tracking opens, clicks, and conversions to optimize future campaigns.</li>
+            </ol>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Boost Your Email Marketing?</h2>
+            <p>Let's create email campaigns that engage your audience and drive results for your business.</p>
+            <a href="index.html#contact" class="btn-primary">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="copyright">
+        <p>© 2023 Your Company Name. All rights reserved.</p>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
